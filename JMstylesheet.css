@@ -1,5 +1,5 @@
 body{
-    background: rgba(24, 50, 129, .6);
+    background: rgba(6, 37, 131, 0.911);
 }
 
 h1{
@@ -24,4 +24,8 @@ tfoot {
 
 .green{
     color: seagreen;
+}
+
+.textCenter{
+    text-align: center;
 }
