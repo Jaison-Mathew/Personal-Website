@@ -10,6 +10,20 @@ nav{
     display: inline;
 }
 
+nav:link{
+    color: rgb(7, 36, 73);
+    text-decoration: none;
+}
+
+nav:hover{
+    color: white;
+    font-size: large;
+}
+
+nav:active{
+    color: red;
+}
+
 .navButton{
     padding: 5px, 20px;
     margin: 5px;
@@ -51,7 +65,7 @@ ul{
 table,
 td {
     border: 1px solid #333;
-    width: 200px;
+    width: 450px;
 }
 
 thead,
