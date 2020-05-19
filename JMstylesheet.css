@@ -10,6 +10,18 @@ nav{
     display: inline;
 }
 
+.navButton{
+    padding: 5px, 20px;
+    margin: 5px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    background-color: black;
+    list-style: none;
+    width: 70px;
+    height: 15px;
+}
+
 ul{
     font-family: fantasy;
 }
