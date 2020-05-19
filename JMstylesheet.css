@@ -30,6 +30,14 @@ ul{
     width: 100px;
     height: 140px;
     float: right;
+    position: relative;
+    right: 40px;
+}
+
+.picTopRight{
+    position: relative;
+    right: 10px;
+    float: right;
 }
 
 .container{
