@@ -10,22 +10,8 @@ nav{
     display: inline;
 }
 
-nav:link{
-    color: white;
-    text-decoration: none;
-}
-
-nav:hover{
-    color: yellow;
-    font-size: large;
-}
-
-nav:active{
-    color: red;
-}
-
-.navButton{
-    padding: 5px, 20px;
+nav li{
+   padding: 5px, 20px;
     margin: 5px;
     color: white;
     text-align: center;
@@ -33,7 +19,43 @@ nav:active{
     background-color: black;
     list-style: none;
     width: 70px;
-    height: 15px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#banner{
+    background: url(field.jpg) no-repeat;
+    height: 160px;
+    background-size: cover;
+    position: relative;
+}
+
+#bannerText{
+    position: absolute;
+    background-color: purple;
+    bottom: 10%;
+    right: 10%;
+    padding: 15px;
+    border-radius: 15px 5px;
+    color: white;
+    font-size: 1em;
+
+}
+
+nav li:link{
+    color: white;
+    text-decoration: none;
+}
+
+nav li:hover{
+    color: yellow;
+    font-size: large;
+    height: 30px;
+}
+
+nav li:active{
+    color: red;
 }
 
 ul{
@@ -45,7 +67,7 @@ ul{
     height: 140px;
     float: right;
     position: relative;
-    right: 40px;
+    right: 10px;
 }
 
 .picTopRight{
@@ -66,6 +88,8 @@ table,
 td {
     border: 1px solid #333;
     width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 thead, tr, tfoot {
