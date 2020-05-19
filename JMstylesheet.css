@@ -90,6 +90,11 @@ thead{
     color: seagreen;
 }
 
+textarea{
+    border: yellow solid 1px;
+    overflow-y: hidden;
+}
+
 .textCenter{
     text-align: center;
 }
