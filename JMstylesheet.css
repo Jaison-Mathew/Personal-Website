@@ -1,3 +1,7 @@
+a{
+    color: white;
+}
+
 body{
     background: rgba(6, 37, 131, 0.911);
 }
@@ -13,7 +17,6 @@ nav{
 nav li{
    padding: 5px, 20px;
     margin: 5px;
-    color: white;
     text-align: center;
     display: inline-block;
     background-color: black;
@@ -44,7 +47,6 @@ nav li{
 }
 
 nav li:link{
-    color: white;
     text-decoration: none;
 }
 
@@ -124,5 +126,6 @@ textarea{
 }
 
 footer{
+    font-size: small;
     font-style: italic;
 }
