@@ -9,9 +9,14 @@ console.log(typeof(b));
 
 function counter(x){
     b++;
-    var posts = x + b 
-    document.querySelector('section').innerHTML = posts;
+    var posts = x + b;
+    if(b >= 100){
+        b = 0;
+    }else{
+        document.querySelector('section').innerHTML = posts;
+    }
     console.log(x);
+    
 }
 
 function multiply(p, q){
