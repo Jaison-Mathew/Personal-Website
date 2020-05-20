@@ -16,7 +16,6 @@ function counter(x){
         document.querySelector('section').innerHTML = posts;
     }
     console.log(x);
-    
 }
 
 function multiply(p, q){
@@ -48,6 +47,14 @@ if(num == 12 && b == 0){
     console.log('num is less than 11');
 }else{
     console.log('num is greater than 12');
+}
+
+for(var i =0; i<= favMovies.length; i++){
+    console.log(i);
+}
+
+for(var t in car){
+    console.log(t + ': ' + car[t])
 }
 
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
