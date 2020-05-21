@@ -207,4 +207,16 @@ for(var p =0; p<hoverList.length; p++){
     });
 }
 
+//creating element
+var newList = document.querySelector('ol');
+var clickit = document.getElementById('clickit');
+clickit.addEventListener('click', function(){
+    var il = document.createElement('li');
+    var allList = document.querySelectorAll('li');
+    var textVal = 'blank '+(allList.length +1);
+    var tempNode = document.createTextNode(textVal);
+    il.appendChild(tempNode);
+    newList.appendChild(il);
+})
+
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
