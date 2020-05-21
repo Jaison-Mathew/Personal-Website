@@ -138,4 +138,18 @@ console.log(el5);
 el5.textContent = "hello WORLD!";
 el5.textContent;
 el5.outerHTML = "happy <br> birthday.";
+
+var stuff = document.querySelector('ol');
+console.dir('stuff');
+stuff.classList.add('blue');
+stuff.classList.toggle('blue');
+stuff.classList.remove('blue');
+
+var rvb = document.getElementsByTagName('test');
+console.log(rvb[0]);
+var bvr = rvb[0];
+bvr.style.backgroundColor = "brown";
+bvr.style.color = "white";
+bvr.style.fontSize = "25px";
+
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
