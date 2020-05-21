@@ -86,6 +86,11 @@ ul{
     height: 100px;
 }
 
+.lightblue{
+    background-color: blueviolet;
+    color: yellow;
+}
+
 table,
 td {
     border: 1px solid #333;
