@@ -7,6 +7,7 @@ c = a + ' ' + b;
 console.log(c);
 console.log(typeof(b));
 
+//if statement
 function counter(x){
     b++;
     var posts = x + b;
@@ -18,10 +19,13 @@ function counter(x){
     console.log(x);
 }
 
+/*
+//understanding functions
 function multiply(p, q){
     return p*q;
 }
 
+//created objects
 var car = {};
 car.year = 1984;
 car.type = 'pontiac';
@@ -38,7 +42,7 @@ game.introMessage = function(){
     return 'Welcome to Mario Kart.';
 }
 
-
+//created arrays
 var favMovies = ["Back to the future", 1985, "Avengers Endgame", 2019]
 favMovies[favMovies.length] = "Lord of the Rings"
 favMovies[favMovies.length] = 2003
@@ -49,6 +53,7 @@ console.log(favMovies);
 var clean = favMovies.reverse();
 console.log(favMovies);
 
+//more if statements
 var num = 12;
 if(num == 12 && b == 0){
     console.log('both are equal');
@@ -58,6 +63,7 @@ if(num == 12 && b == 0){
     console.log('num is greater than 12');
 }
 
+//created for loops
 for(var i =0; i<= favMovies.length; i++){
     console.log(i);
 }
@@ -70,6 +76,7 @@ for(var play in game){
     console.log(play + ': ' + game[play])
 }
 
+//created string and displayed index functions
 var myString = "I look forward to working with you."
 var find = myString.indexOf('to');
 console.log(find);
@@ -89,7 +96,7 @@ function output(mess){
 }
 
 const myButton = document.querySelector('#buttonTest');
-myButton.addEventListener('click', buttonPress);*/
+myButton.addEventListener('click', buttonPress);
 
 const output = document.getElementById('output');
 const testingButton = document.getElementById('testingButton');
@@ -109,5 +116,26 @@ function numChecker(num){
     }
     return message;
 }
+*/
 
+console.log(document.URL);
+var el = document.querySelector('h2');
+console.dir(el.innerHTML);
+el.innerHTML = 'hi everybody';
+el.style.color = 'blue';
+el.style.background = 'green';
+
+var el2 = document.getElementsByTagName('li');
+el2[0].style.background = 'yellow';
+el2[2].style.color = 'green';
+console.log(el2);
+
+var ment = document.getElementById('buttonTest');
+ment.style.background = 'orange';
+
+var el5 = document.querySelector('p');
+console.log(el5);
+el5.textContent = "hello WORLD!";
+el5.textContent;
+el5.outerHTML = "happy <br> birthday.";
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
