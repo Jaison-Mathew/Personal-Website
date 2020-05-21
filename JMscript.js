@@ -171,7 +171,6 @@ light.addEventListener('click', function(){
     console.log('click');
     light.style.color = "blue";
 })
-*/
 
 //selecting multiple elements
 var myList = document.querySelectorAll('li');
@@ -184,4 +183,28 @@ function redify(){
     var tmp = this.classList.toggle('red');
     console.log(tmp);
 }
+
+//creating keypress events
+var wordUp = document.querySelector('input[name="mywords"]');
+wordUp.addEventListener('keypress', function(events){
+    if(events.keyCode === 13 && wordUp.value.length > 1){
+        console.log(wordUp.value.length);
+        starcol.style.backgroundColor = "brown";
+    }
+})
+var starcol = document.querySelector('ol');
+*/
+
+//creating mouse events
+var hoverList = document.querySelectorAll('li');
+for(var p =0; p<hoverList.length; p++){
+    console.log(hoverList[p]);
+    hoverList[p].addEventListener('mouseover', function(){
+        this.classList.add('lightblue');
+    });
+    hoverList[p].addEventListener('mouseout', function(){
+        this.classList.remove('lightblue');
+    });
+}
+
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
