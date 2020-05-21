@@ -116,7 +116,7 @@ function numChecker(num){
     }
     return message;
 }
-*/
+
 
 console.log(document.URL);
 var el = document.querySelector('h2');
@@ -152,4 +152,36 @@ bvr.style.backgroundColor = "brown";
 bvr.style.color = "white";
 bvr.style.fontSize = "25px";
 
+
+var pix = document.getElementsByTagName('a');
+console.log(pix[0]);
+var pix2 = document.getElementsByTagName('img');
+console.log(pix2[1]);
+var temp = pix[0].getAttribute('href');
+pix[0].setAttribute('href', 'https://www.linkedin.com/uas/login?session_redirect=%2Ffeed');
+var tempImg = pix2[0].getAttribute('src');
+var tmpImg2 = pix2[1].getAttribute('src');
+pix2[0].setAttribute('src', tmpImg2);
+pix2[1].setAttribute('src', tempImg);
+console.log(tempImg);
+
+//interactive DOM elements
+var light = document.querySelector('ol');
+light.addEventListener('click', function(){
+    console.log('click');
+    light.style.color = "blue";
+})
+*/
+
+//selecting multiple elements
+var myList = document.querySelectorAll('li');
+for(var k = 0; k < myList.length; k++){
+    myList[k].addEventListener('click', redify);
+}
+
+function redify(){
+    console.log(this);
+    var tmp = this.classList.toggle('red');
+    console.log(tmp);
+}
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
