@@ -262,7 +262,7 @@ var myObj = {
     "phone number": [
         {
             "type": "home",
-            "phoneNum": "123-456-7890";
+            "phoneNum": "123-456-7890"
         },
         {
             "type": "work",
@@ -276,4 +276,7 @@ var myObj = {
     "gender": "male"
 };
 console.log(myObj);
+var output1 = document.getElementById('output1');
+output1.innerHTML = 'My name is ' + myObj.firstName + ' ' + myObj.lastName;
+
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
