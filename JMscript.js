@@ -245,6 +245,35 @@ function makeNew(){
     var tempNode = document.createTextNode(textVal);
     il.appendChild(tempNode);
     newList.appendChild(il);
-})
+}
 
+//creating json object
+var myObj = {
+    "firstName": "John",
+    "lastName": "Jones",
+    "age": 34,
+    "job": "Detective",
+    "homeAddr": {
+        "street address": "21 jump street",
+        "city": "blue valley",
+        "state": "New Jersey",     
+        "zipcode": "12345"
+    },
+    "phone number": [
+        {
+            "type": "home",
+            "phoneNum": "123-456-7890";
+        },
+        {
+            "type": "work",
+            "phoneNum": "345-123-5432"
+        },
+        {
+            "type": "mobile",
+            "phonenum": "876-398-0935"
+        }
+    ],
+    "gender": "male"
+};
+console.log(myObj);
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
