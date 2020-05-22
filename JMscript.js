@@ -259,7 +259,7 @@ var myObj = {
         "state": "New Jersey",     
         "zipcode": "12345"
     },
-    "phone number": [
+    "phoneNumber": [
         {
             "type": "home",
             "phoneNum": "123-456-7890"
@@ -270,13 +270,61 @@ var myObj = {
         },
         {
             "type": "mobile",
-            "phonenum": "876-398-0935"
+            "phoneNum": "876-398-0935"
         }
     ],
     "gender": "male"
 };
 console.log(myObj);
 var output1 = document.getElementById('output1');
-output1.innerHTML = 'My name is ' + myObj.firstName + ' ' + myObj.lastName;
+output1.innerHTML = 'My name is ' + myObj.firstName + ' ' + myObj.phoneNumber[1].phoneNum;
 
+var favObj = {
+    "games":[
+        {
+            "name": "Ratchet and Clank",
+            "year": 2002,
+            "developer": "Insomniac Games",
+            "platform": "Playstation 2"
+        },
+        {
+            "name": "Donkey Kong",
+            "year": 1982,
+            "developer": "Nintendo",
+            "platform": "Arcade"
+        }],
+    "songs":[
+        {
+            "songName": "In the End",
+            "artist": "Linkin Park",
+            "album": "Hybrid Theory"
+        },
+        {
+            "songName": "Absolutely",
+            "artist": "Nine Days",
+            "album": "The Madding Crowd"
+        }]
+}
+console.log(favObj);
+
+//Adding object to array
+var addSome = {
+    "songName": "Back in the game",
+    "artist": "Airbourne",
+    "album": "Mad Dog"
+}
+favObj.songs.push(addSome);
+
+var output2 = document.getElementById('output2');
+var myJamz = document.getElementById('myJamz');
+for(var t=0; t<favObj.games.length; t++){
+    var gameOn = favObj.games[t];
+    console.log(gameOn);
+    output2.innerHTML += gameOn.name + " by " + gameOn.developer + "<br>";
+}
+for(var e=0; e<favObj.songs.length; e++){
+    var music = favObj.songs[e];
+    console.log(music);
+    myJamz.innerHTML += music.songName + " by " + music.artist + "<br>";
+}
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
