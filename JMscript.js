@@ -327,4 +327,40 @@ for(var e=0; e<favObj.songs.length; e++){
     console.log(music);
     myJamz.innerHTML += music.songName + " by " + music.artist + "<br>";
 }
+
+//testing stringify function and local storage
+var showMe = document.getElementById('showMe');
+var tmpString = JSON.stringify(addSome);
+var tmpObj = localStorage.getItem('test');
+console.log(tmpObj);
+var stringToObj = JSON.parse(tmpString);
+showMe.innerHTML = addSome.songName + ' is a great song.';
+
+//testing fetching API
+const showDisplay = document.getElementById('showDisplay');
+const urlapi = "https://randomuser.me/api/?results=5";
+/*
+fetch(urlapi).then(function(response){
+    return response.json();
+}).then(function(data){
+    console.log(data.results[0]);
+    let people = data.results[0].name;
+    showDisplay.innerHTML = people.first + ' ' + people.last;
+}).catch(function(err){
+    console.log(err);
+});*/
+
+//using foreach function
+fetch(urlapi).then(function(res){
+    return res.json()
+}).then(function(data){
+data.results.forEach(function(person){
+    console.log(person.name.first);
+    console.log(person.picture.thumbnail);
+    output.innerHTML += person.name.first + " ";
+    output.innerHTML += "<img src='"+person.picture.thumbnail+"'><br>";
+})
+    console.log(data);  
+})
+
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
