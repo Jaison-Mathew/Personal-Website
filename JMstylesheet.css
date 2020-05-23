@@ -1,0 +1,136 @@
+a{
+    color: white;
+}
+
+body{
+    background: rgba(6, 37, 131, 0.911);
+}
+
+h1{
+    color: red;
+}
+
+nav{
+    display: inline;
+}
+
+nav li{
+   padding: 5px, 20px;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+    background-color: black;
+    list-style: none;
+    width: 70px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#banner{
+    background: url(field.jpg) no-repeat;
+    height: 160px;
+    background-size: cover;
+    position: relative;
+}
+
+#bannerText{
+    position: absolute;
+    background-color: purple;
+    bottom: 10%;
+    right: 10%;
+    padding: 15px;
+    border-radius: 15px 5px;
+    color: white;
+    font-size: 1em;
+
+}
+
+nav li:link{
+    text-decoration: none;
+}
+
+nav li:hover{
+    color: yellow;
+    font-size: large;
+    height: 30px;
+}
+
+nav li:active{
+    color: red;
+}
+
+ul{
+    font-family: fantasy;
+}
+
+.picFloat{
+    width: 100px;
+    height: 140px;
+    float: right;
+    position: relative;
+    right: 10px;
+}
+
+.picTopRight{
+    position: relative;
+    right: 10px;
+    float: right;
+}
+
+.container{
+    padding: 10px;
+    border: dotted orangered 10px;
+    margin: 10px;
+    width: 290px;
+    height: 100px;
+}
+
+.lightblue{
+    background-color: blueviolet;
+    color: yellow;
+}
+
+table,
+td {
+    border: 1px solid #333;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead, tr, tfoot {
+    color: #fff;
+    text-align: center;
+}
+
+tr:nth-child(odd){
+    background-color: purple;
+}
+
+tr:nth-child(even){
+    background-color: rgb(3, 31, 17);
+}
+
+thead{
+    background-color: grey;
+    font-style: oblique;
+}
+
+.green{
+    color: seagreen;
+}
+
+textarea{
+    border: yellow solid 1px;
+    overflow-y: hidden;
+}
+
+.textCenter{
+    text-align: center;
+}
+
+footer{
+    font-size: small;
+    font-style: italic;
+}
