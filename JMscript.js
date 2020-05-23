@@ -360,7 +360,6 @@ data.results.forEach(function(person){
     output.innerHTML += person.name.first + " ";
     output.innerHTML += "<img src='"+person.picture.thumbnail+"'><br>";
 })
-    console.log(data);  
+    console.log(data);
 })
-
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
