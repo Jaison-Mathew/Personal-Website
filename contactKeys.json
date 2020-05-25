@@ -1,0 +1,21 @@
+
+{
+    "firstName": "Mark",
+    "lastName": "Jones",
+    "email": "mjones@techcompany.com",
+    "message": "How are you? I am doing well"
+}
+
+{
+    "firstName": "Joe",
+    "lastName": "Richards",
+    "email": "joe_richards@gmail.com",
+    "message": "Hi Jaison. My name is Joe and I would like to schedule an appointment with you."
+}
+
+{
+    "firstName": "Matt",
+    "lastName": "Powers",
+    "email": "mpowers@tech.com",
+    "message": "I would like to speak with you regarding your application."
+}
