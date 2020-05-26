@@ -22,19 +22,19 @@ function counter(x){
 //function that creates endless loop of images.
 var y=0;
 var pics = [];
-pics[0] = "mypic.jpg";
-pics[1] = "dance.jpg";
+pics[0] = "dance.jpg";
+pics[1] = "mypic.jpg";
 pics[2] = "samplepic.png";
+pics[3] = "sample2.png";
 function endlessImage(){ 
     var noEnd = document.getElementById("noEnd");
     noEnd.src = pics[y];
     y++;
 
-    console.log(pics[y]);
-    if(y >= pics.length){
+    if(y > pics.length){
         y=0;
     }
-    var timer = setInterval(endlessImage(), 3000);
+    setInterval("endlessImage()", 3000);
 }
 
 //creating mouse events
@@ -190,9 +190,10 @@ fetch(urlapi).then(function(response){
     showDisplay.innerHTML = people.first + ' ' + people.last;
 }).catch(function(err){
     console.log(err);
-});*/
+});
 
 //using foreach function
+
 fetch(urlapi).then(function(res){
     return res.json()
 }).then(function(data){
@@ -203,5 +204,5 @@ data.results.forEach(function(person){
     output.innerHTML += "<img src='"+person.picture.thumbnail+"'><br>";
 })
     console.log(data);
-})
+})*/
 //document.querySelector('h2').innerHTML = car.name + '' + car.year;
