@@ -20,18 +20,22 @@ function counter(x){
 }
 
 //function that creates endless loop of images.
+var y=0;
+var pics = [];
+pics[0] = "mypic.jpg";
+pics[1] = "dance.jpg";
+pics[2] = "samplepic.png";
 function endlessImage(){ 
-    var pics = ["mypic.jpg", "samplepic.png", "dance.jpg", "mypic.jpg"]; 
-    //var c = document.images.pics;
-    for(var y=0; y<=pics.length; y++){
-        document.getElementById('noEnd').src = pics[y];
-        console.log(pics[y]);
-        if(pics[y] == pics.length){
-            y=0;
-        }
+    var noEnd = document.getElementById("noEnd");
+    noEnd.src = pics[y];
+    y++;
+
+    console.log(pics[y]);
+    if(y >= pics.length){
+        y=0;
     }
+    var timer = setInterval(endlessImage(), 3000);
 }
-setTimeout("endlessImage", 3000);
 
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
