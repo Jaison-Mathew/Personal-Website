@@ -38,6 +38,12 @@ function endlessImage(){
     setTimeout("endlessImage()", 3000);
 }
 
+//function that parses JSON file and fill in fields.
+function contactParse(){
+    var obj = JSON.parse("contactKeys.json");
+    
+}
+
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
 for(var p =0; p<hoverList.length; p++){
