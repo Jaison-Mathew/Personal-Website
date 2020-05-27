@@ -40,8 +40,10 @@ function endlessImage(){
 
 //function that parses JSON file and fill in fields.
 function contactParse(){
-    var obj = JSON.parse("contactKeys.json");
-    
+    var contentjson = document.getElementById("contentjson");
+    var obj = require("C:/Users/jtron/Documents/Websites/Personal-Website/contactKeys.json");
+    var objString = JSON.parse(obj);
+    console.log(objString.value);
 }
 
 //creating mouse events
