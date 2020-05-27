@@ -22,19 +22,20 @@ function counter(x){
 //function that creates endless loop of images.
 var y=0;
 var pics = [];
-pics[0] = "dance.jpg";
-pics[1] = "mypic.jpg";
+pics[0] = "mypic.jpg";
+pics[1] = "dance.jpg";
 pics[2] = "samplepic.png";
 pics[3] = "sample2.png";
 function endlessImage(){ 
     var noEnd = document.getElementById("noEnd");
     noEnd.src = pics[y];
+    console.log(y+' '+pics[y]);
     y++;
-
-    if(y > pics.length){
+    
+    if(y >= pics.length){
         y=0;
     }
-    setInterval("endlessImage()", 3000);
+    setTimeout("endlessImage()", 3000);
 }
 
 //creating mouse events
