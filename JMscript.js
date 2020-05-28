@@ -1,11 +1,11 @@
-console.dir(document);
-console.log('me');
+//console.dir(document);
+//console.log('me');
 var a = "\"Hanging\"";
 var b = 0;
 var c;
 c = a + ' ' + b;
-console.log(c);
-console.log(typeof(b));
+//console.log(c);
+//console.log(typeof(b));
 
 //if statement
 function counter(x){
@@ -16,7 +16,7 @@ function counter(x){
     }else{
         document.querySelector('section').innerHTML = posts;
     }
-    console.log(x);
+    //console.log(x);
 }
 
 //function that creates endless loop of images.
@@ -29,7 +29,7 @@ pics[3] = "sample2.png";
 function endlessImage(){ 
     var noEnd = document.getElementById("noEnd");
     noEnd.src = pics[y];
-    console.log(y+' '+pics[y]);
+    //console.log(y+' '+pics[y]);
     y++;
     
     if(y >= pics.length){
@@ -39,17 +39,35 @@ function endlessImage(){
 }
 
 //function that parses JSON file and fill in fields.
+/*
 function contactParse(){
     var contentjson = document.getElementById("contentjson");
     var obj = require("C:/Users/jtron/Documents/Websites/Personal-Website/contactKeys.json");
     var objString = JSON.parse(obj);
     console.log(objString.value);
+}*/
+function onChange(event) {
+    var reader = new FileReader();
+    reader.onload = onReaderLoad;
+    reader.readAsText(event.target.files[0]);
 }
+
+function onReaderLoad(event){
+    console.log(event.target.result);
+    var obj = JSON.parse(event.target.result);
+    //console.log(obj.fname, obj.lname);
+}
+
+function alert_data(fname, lname){
+    //alert('First name : ' + fname + ', Last name : ' + lname);
+    //console.log(fname, lname);
+}
+document.getElementById('file').addEventListener('change', onChange);
 
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
 for(var p =0; p<hoverList.length; p++){
-    console.log(hoverList[p]);
+    //console.log(hoverList[p]);
     hoverList[p].addEventListener('mouseover', function(){
         this.classList.add('lightblue');
     });
@@ -62,7 +80,7 @@ for(var p =0; p<hoverList.length; p++){
 var selectInput = document.querySelector('input[name="newItem"]');
 selectInput.addEventListener('keypress', function(event){
     if(event.keycode === 13){
-        console.log(event.keycode);
+        //console.log(event.keycode);
         makeNew();
     }
 })
@@ -126,9 +144,9 @@ var myObj = {
     ],
     "gender": "male"
 };
-console.log(myObj);
+//console.log(myObj);
 var output1 = document.getElementById('output1');
-output1.innerHTML = 'My name is ' + myObj.firstName + ' ' + myObj.phoneNumber[1].phoneNum;
+//output1.innerHTML = 'My name is ' + myObj.firstName + ' ' + myObj.phoneNumber[1].phoneNum;
 
 var favObj = {
     "games":[
@@ -156,7 +174,7 @@ var favObj = {
             "album": "The Madding Crowd"
         }]
 }
-console.log(favObj);
+//console.log(favObj);
 
 //Adding object to array
 var addSome = {
@@ -165,27 +183,27 @@ var addSome = {
     "album": "Mad Dog"
 }
 favObj.songs.push(addSome);
-
+/*
 var output2 = document.getElementById('output2');
 var myJamz = document.getElementById('myJamz');
 for(var t=0; t<favObj.games.length; t++){
     var gameOn = favObj.games[t];
-    console.log(gameOn);
+    //console.log(gameOn);
     output2.innerHTML += gameOn.name + " by " + gameOn.developer + "<br>";
 }
 for(var e=0; e<favObj.songs.length; e++){
     var music = favObj.songs[e];
-    console.log(music);
+    //console.log(music);
     myJamz.innerHTML += music.songName + " by " + music.artist + "<br>";
-}
+}*/
 
 //testing stringify function and local storage
 var showMe = document.getElementById('showMe');
 var tmpString = JSON.stringify(addSome);
 var tmpObj = localStorage.getItem('test');
-console.log(tmpObj);
+//console.log(tmpObj);
 var stringToObj = JSON.parse(tmpString);
-showMe.innerHTML = addSome.songName + ' is a great song.';
+//showMe.innerHTML = addSome.songName + ' is a great song.';
 
 //testing fetching API
 const showDisplay = document.getElementById('showDisplay');
