@@ -1,7 +1,6 @@
 
 {
-    "firstName": "Mark",
-    "lastName": "Jones",
-    "email": "mjones@techcompany.com",
-    "message": "How are you? I am doing well"
+    "fName": "Mark",
+    "lName": "Jones",
+    "email": "mjones@techcompany.com"
 }

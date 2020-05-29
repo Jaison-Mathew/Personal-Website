@@ -39,13 +39,7 @@ function endlessImage(){
 }
 
 //function that parses JSON file and fill in fields.
-/*
-function contactParse(){
-    var contentjson = document.getElementById("contentjson");
-    var obj = require("C:/Users/jtron/Documents/Websites/Personal-Website/contactKeys.json");
-    var objString = JSON.parse(obj);
-    console.log(objString.value);
-}*/
+
 function onChange(event) {
     var reader = new FileReader();
     reader.onload = onReaderLoad;
@@ -54,17 +48,17 @@ function onChange(event) {
 
 function onReaderLoad(event){
     console.log(event.target.result);
-    var obj = JSON.parse(event.target.result);   
+    var obj = JSON.parse(event.target.result);
+    contentDisplay(obj.fName, obj.lName, obj.email);   
 }
 document.getElementById('file').addEventListener('change', onChange);
 
 //function that will use uploaded json file to fill in text fields
-function contentDisplay(){
-    var textStuff = document.getElementById('display').value;
-    var myValue = JSON.parse(textStuff);
-    var objtoString = JSON.stringify(myValue);
-    document.getElementById('display').innerHTML = objtoString;
-    console.log(objtoString);
+function contentDisplay(fName, lName, email){
+    document.getElementById('fName').value = fName;
+    document.getElementById('lName').value = lName;
+    document.getElementById('email').value = email;
+    console.log(fName, lName, email);
 }
 
 //creating mouse events
