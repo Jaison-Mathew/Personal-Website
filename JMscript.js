@@ -54,15 +54,18 @@ function onChange(event) {
 
 function onReaderLoad(event){
     console.log(event.target.result);
-    var obj = JSON.parse(event.target.result);
-    //console.log(obj.fname, obj.lname);
-}
-
-function alert_data(fname, lname){
-    //alert('First name : ' + fname + ', Last name : ' + lname);
-    //console.log(fname, lname);
+    var obj = JSON.parse(event.target.result);   
 }
 document.getElementById('file').addEventListener('change', onChange);
+
+//function that will use uploaded json file to fill in text fields
+function contentDisplay(){
+    var textStuff = document.getElementById('display').value;
+    var myValue = JSON.parse(textStuff);
+    var objtoString = JSON.stringify(myValue);
+    document.getElementById('display').innerHTML = objtoString;
+    console.log(objtoString);
+}
 
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
