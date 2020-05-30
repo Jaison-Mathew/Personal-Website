@@ -1,4 +1,4 @@
-/*
+
 //understanding functions
 function multiply(p, q){
     return p*q;
@@ -64,7 +64,7 @@ console.log(look);
 var letterIndex = myString.lastIndexOf('forward');
 console.log(letterIndex);
 
-/*const myElement = document.querySelector('h2')
+const myElement = document.querySelector('h2')
 function buttonPress(){
     let temp = document.getElementById("myInput");
     output(temp.value);
@@ -172,7 +172,7 @@ wordUp.addEventListener('keypress', function(events){
     }
 })
 var starcol = document.querySelector('ol');
-*/
+
 
 function stuff(){
     

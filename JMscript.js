@@ -1,11 +1,9 @@
-//console.dir(document);
-//console.log('me');
+
 var a = "\"Hanging\"";
 var b = 0;
 var c;
 c = a + ' ' + b;
-//console.log(c);
-//console.log(typeof(b));
+
 
 //if statement
 function counter(x){
@@ -16,7 +14,6 @@ function counter(x){
     }else{
         document.querySelector('section').innerHTML = posts;
     }
-    //console.log(x);
 }
 
 //function that creates endless loop of images.
@@ -29,7 +26,6 @@ pics[3] = "sample2.png";
 function endlessImage(){ 
     var noEnd = document.getElementById("noEnd");
     noEnd.src = pics[y];
-    //console.log(y+' '+pics[y]);
     y++;
     
     if(y >= pics.length){
@@ -49,16 +45,19 @@ function onChange(event) {
 function onReaderLoad(event){
     console.log(event.target.result);
     var obj = JSON.parse(event.target.result);
-    contentDisplay(obj.fName, obj.lName, obj.email);   
+    contentDisplay(obj.fName, obj.lName, obj.email, obj.subject, obj.message, obj.url);   
 }
 document.getElementById('file').addEventListener('change', onChange);
 
 //function that will use uploaded json file to fill in text fields
-function contentDisplay(fName, lName, email){
+function contentDisplay(fName, lName, email, subject, message, url){
     document.getElementById('fName').value = fName;
     document.getElementById('lName').value = lName;
     document.getElementById('email').value = email;
-    console.log(fName, lName, email);
+    document.getElementById('subject').value = subject;
+    document.getElementById('message').value = message;
+    document.getElementById('url').value = url;
+    console.log(fName, lName, email, subject, message, url);
 }
 
 //creating mouse events
