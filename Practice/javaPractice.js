@@ -1,4 +1,4 @@
-/*
+
 //understanding functions
 function multiply(p, q){
     return p*q;
@@ -64,7 +64,7 @@ console.log(look);
 var letterIndex = myString.lastIndexOf('forward');
 console.log(letterIndex);
 
-/*const myElement = document.querySelector('h2')
+const myElement = document.querySelector('h2')
 function buttonPress(){
     let temp = document.getElementById("myInput");
     output(temp.value);
@@ -172,4 +172,25 @@ wordUp.addEventListener('keypress', function(events){
     }
 })
 var starcol = document.querySelector('ol');
-*/
+
+
+function stuff(){
+    
+    function onChange(event) {
+        var reader = new FileReader();
+        reader.onload = onReaderLoad;
+        reader.readAsText(event.target.files[0]);
+    }
+
+    function onReaderLoad(event){
+        console.log(event.target.result);
+        var obj = JSON.parse(event.target.result);
+        alert_data(obj.name, obj.family);
+    }
+    
+    function alert_data(name, family){
+        alert('Name : ' + name + ', Family : ' + family);
+    }
+ 
+    document.getElementById('file').addEventListener('change', onChange);        
+}
