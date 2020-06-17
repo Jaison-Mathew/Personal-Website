@@ -60,6 +60,15 @@ function contentDisplay(fName, lName, email, subject, message, url){
     console.log(fName, lName, email, subject, message, url);
 }
 
+//jquery function slides additional info from favObj object when clicked
+$("#b3").click(function(){
+    $("li").slideToggle(1000,function(){
+
+        console.log("Slide was toggled");
+        
+    });
+})
+
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
 for(var p =0; p<hoverList.length; p++){
@@ -153,10 +162,10 @@ var favObj = {
             "platform": "Playstation 2"
         },
         {
-            "name": "Donkey Kong",
-            "year": 1982,
+            "name": "Mario Kart",
+            "year": 1996,
             "developer": "Nintendo",
-            "platform": "Arcade"
+            "platform": "N64"
         }],
     "songs":[
         {
