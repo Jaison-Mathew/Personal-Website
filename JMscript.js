@@ -22,7 +22,7 @@ var pics = [];
 pics[0] = "mypic.jpg";
 pics[1] = "dance.jpg";
 pics[2] = "samplepic.png";
-pics[3] = "sample2.png";
+pics[3] = "sample2.jpg";
 function endlessImage(){ 
     var noEnd = document.getElementById("noEnd");
     noEnd.src = pics[y];
@@ -34,14 +34,15 @@ function endlessImage(){
     setTimeout("endlessImage()", 3000);
 }
 
-//jquery function slides additional info from favObj object when clicked
-$("#b3").click(function(){
-    $("li").slideToggle(1000,function(){
+//jquery function slides additional info when clicked
+$(document).ready(function() {
+    $("#b3").click(function(){
+        $("ol").slideToggle(1000,function(){
+            console.log("Slide was toggled");            
+        });
+    })
+});
 
-        console.log("Slide was toggled");
-        
-    });
-})
 
 //creating mouse events
 var hoverList = document.querySelectorAll('li');
@@ -53,46 +54,6 @@ for(var p =0; p<hoverList.length; p++){
     hoverList[p].addEventListener('mouseout', function(){
         this.classList.remove('lightblue');
     });
-}
-
-//creating element
-var selectInput = document.querySelector('input[name="newItem"]');
-selectInput.addEventListener('keypress', function(event){
-    if(event.keycode === 13){
-        //console.log(event.keycode);
-        makeNew();
-    }
-})
-
-var newList = document.querySelector('ol');
-var clickit = document.getElementById('clickit');
-var allList = document.querySelectorAll('li');
-    
-for(var x=0; x<allList.length; x++){
-    allList[x].addEventListener('click', myList);
-}
-function myList(){
-    var tog = this.classList.toggle('lightblue');
-    if(tog){
-        var span = document.createElement('span');
-        span.textContent = 'x';
-        span.addEventListener('click', function(){
-            this.parentElement.remove;
-        })
-        this.appendChild(span);
-
-    }else{
-        this.getElementById('span')[0].remove();
-    }
-}
-
-function makeNew(){
-    var il = document.createElement('li');
-    il.addEventListener('click', myList);
-    var textVal = 'blank '+(allList.length +1);
-    var tempNode = document.createTextNode(textVal);
-    il.appendChild(tempNode);
-    newList.appendChild(il);
 }
 
 //creating json object

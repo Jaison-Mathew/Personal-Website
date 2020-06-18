@@ -6,6 +6,10 @@ a{
     color:yellow;
 }
 
+a:hover{
+    color: red;
+}
+
 body{
     background: rgba(6, 37, 131, 0.911);
 }
@@ -72,7 +76,7 @@ ul{
     width: 100px;
     height: 140px;
     float: right;
-    position: relative;
+    position: absolute;
     right: 10px;
 }
 
@@ -82,12 +86,18 @@ ul{
     float: right;
 }
 
+.placeRight{
+    position: absolute;
+    right: 150px;
+    float: right;
+}
+
 .contain{
     padding: 10px;
     border: dotted orangered 10px;
     margin: 10px;
     width: 290px;
-    height: 100px;
+    height: 180px;
 }
 
 .lightblue{
@@ -137,4 +147,5 @@ textarea{
 footer{
     font-size: small;
     font-style: italic;
+    color: white;
 }
