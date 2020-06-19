@@ -73,11 +73,11 @@ ul{
 }
 
 .picFloat{
-    width: 100px;
-    height: 140px;
+    width: 300px;
+    height: 340px;
     float: right;
     position: absolute;
-    right: 10px;
+    right: 200px;
 }
 
 .picMiddle{

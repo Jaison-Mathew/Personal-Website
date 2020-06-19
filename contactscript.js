@@ -1,5 +1,20 @@
-//function that parses JSON file and fill in fields.
+var a = "\"Hanging\"";
+var b = 0;
+var c;
+c = a + ' ' + b;
 
+//if statement that displays the number of times the reset button is clicked on.
+function counter(x){
+    b++;
+    var posts = x + b;
+    if(b >= 100){
+        b = 0;      //Counter goes back to 0 when it reaches 100
+    }else{
+        document.querySelector('section').innerHTML = posts;
+    }
+}
+
+//function that parses JSON file and fill in fields.
 function onChange(event) {
     var reader = new FileReader();
     reader.onload = onReaderLoad;
