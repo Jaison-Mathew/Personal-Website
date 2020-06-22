@@ -51,15 +51,6 @@ for(var p =0; p<hoverList.length; p++){
     });
 }
 
-//creating element for comment section
-var selectInput = document.querySelector('input[name="newItem"]');
-selectInput.addEventListener('keypress', function(event){
-    if(event.keycode === 13){
-        //console.log(event.keycode);
-        makeNew();
-    }
-})
-
 //Adds new item in array of string comments with 'x' once clicked
 var newList = document.querySelector('ol');
 var clickit = document.getElementById('clickit');
@@ -86,8 +77,10 @@ function myList(){
 function makeNew(){
     var il = document.createElement('li');
     il.addEventListener('click', myList);
-    var textVal = 'blank '+(allList.length +1);
-    var tempNode = document.createTextNode(textVal);
-    il.appendChild(tempNode);
-    newList.appendChild(il);
+    var textVal = document.getElementById('listAdd').value;
+    if(textVal != ""){
+        var tempNode = document.createTextNode(textVal);
+        il.appendChild(tempNode);
+        newList.appendChild(il);
+    }
 }
