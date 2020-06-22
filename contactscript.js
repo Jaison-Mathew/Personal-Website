@@ -1,5 +1,20 @@
-//function that parses JSON file and fill in fields.
+var a = "\"Hanging\"";
+var b = 0;
+var c;
+c = a + ' ' + b;
 
+//if statement that displays the number of times the reset button is clicked on.
+function counter(x){
+    b++;
+    var posts = x + b;
+    if(b >= 100){
+        b = 0;      //Counter goes back to 0 when it reaches 100
+    }else{
+        document.querySelector('section').innerHTML = posts;
+    }
+}
+
+//function that parses JSON file and fill in fields.
 function onChange(event) {
     var reader = new FileReader();
     reader.onload = onReaderLoad;
@@ -36,15 +51,6 @@ for(var p =0; p<hoverList.length; p++){
     });
 }
 
-//creating element for comment section
-var selectInput = document.querySelector('input[name="newItem"]');
-selectInput.addEventListener('keypress', function(event){
-    if(event.keycode === 13){
-        //console.log(event.keycode);
-        makeNew();
-    }
-})
-
 //Adds new item in array of string comments with 'x' once clicked
 var newList = document.querySelector('ol');
 var clickit = document.getElementById('clickit');
@@ -71,8 +77,10 @@ function myList(){
 function makeNew(){
     var il = document.createElement('li');
     il.addEventListener('click', myList);
-    var textVal = 'blank '+(allList.length +1);
-    var tempNode = document.createTextNode(textVal);
-    il.appendChild(tempNode);
-    newList.appendChild(il);
+    var textVal = document.getElementById('listAdd').value;
+    if(textVal != ""){
+        var tempNode = document.createTextNode(textVal);
+        il.appendChild(tempNode);
+        newList.appendChild(il);
+    }
 }

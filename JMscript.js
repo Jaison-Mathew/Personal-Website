@@ -1,21 +1,3 @@
-
-var a = "\"Hanging\"";
-var b = 0;
-var c;
-c = a + ' ' + b;
-
-
-//if statement
-function counter(x){
-    b++;
-    var posts = x + b;
-    if(b >= 100){
-        b = 0;
-    }else{
-        document.querySelector('section').innerHTML = posts;
-    }
-}
-
 //function that creates endless loop of images.
 var y=0;
 var pics = [];
