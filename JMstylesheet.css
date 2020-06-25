@@ -10,6 +10,12 @@ a:hover{
     color: red;
 }
 
+#webContain{
+    width:100%;
+    min-width:1000px;
+    height:auto;
+}
+
 body{
     background: rgba(6, 37, 131, 0.911);
 }
