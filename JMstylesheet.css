@@ -10,6 +10,13 @@ a:hover{
     color: red;
 }
 
+#webContain{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-self: auto;
+}
+
 body{
     background: rgba(6, 37, 131, 0.911);
 }
@@ -70,6 +77,10 @@ nav li:active{
 
 ul{
     font-family: fantasy;
+}
+
+img{
+    position: fixed;
 }
 
 .picFloat{
