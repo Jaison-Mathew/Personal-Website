@@ -13,8 +13,18 @@ a:hover{
 #webContain{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-self: auto;
+}
+
+.rowStart{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tableRow{
+    width: 100%;
 }
 
 body{
@@ -79,30 +89,6 @@ ul{
     font-family: fantasy;
 }
 
-img{
-    position: fixed;
-}
-
-.picFloat{
-    width: 300px;
-    height: 340px;
-    float: right;
-    position: absolute;
-    right: 200px;
-}
-
-.picMiddle{
-    position: relative;
-    right: 650px;
-    float: right;
-}
-
-.placeRight{
-    position: absolute;
-    right: 150px;
-    float: right;
-}
-
 .contain{
     padding: 10px;
     border: dotted orangered 10px;
@@ -151,7 +137,7 @@ textarea{
     overflow-y: hidden;
 }
 
-.textCenter{
+ .textCenter{
     text-align: center;
 }
 
